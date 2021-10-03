@@ -2,15 +2,15 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Pages
-import MainPage from './components/MainPage/MainPage';
-import AboutPage from './components/AboutPage/AboutPage';
+import Feed from './components/Feed/Feed';
+import SideBar from './components/SideBar/SideBar';
 
 function App() {
   return (
     <div className="App">
+      <SideBar />
       <Router>
-        <Route path="/" exact component={MainPage} />
-        <Route path="/about" exact component={AboutPage} />
+        <Route path="/" exact component={Feed} />
       </Router>
     </div>
   );
