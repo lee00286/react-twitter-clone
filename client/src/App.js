@@ -1,18 +1,31 @@
+// React
+import React, { Suspense } from 'react';
+import { Route, Switch } from "react-router-dom";
+import Auth from "./hoc/auth";
+// Style
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
 // Pages
+import HappeningNow from './components/HappeningNow/HappeningNow';
 import Feed from './components/Feed/Feed';
 import SideBar from './components/SideBar/SideBar';
 
+// null   Anyone Can go inside
+// true   only logged in user can go inside
+// false  logged in user can't go inside
+
 function App() {
   return (
-    <div className="App">
-      <SideBar />
-      <Router>
-        <Route path="/" exact component={Feed} />
-      </Router>
-    </div>
+    <Suspense fallback={(<div>Loading...</div>)}>
+      <div className="App">
+        {/* <SideBar /> */}
+        <div>
+          <Switch>
+            <Route exact path="/" component={Auth(HappeningNow, false)} />
+            <Route exact path="/feed" component={Auth(Feed, true)} />
+          </Switch>
+        </div>
+      </div>
+    </Suspense>
   );
 }
 

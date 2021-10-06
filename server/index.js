@@ -25,7 +25,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Router
-app.use('/api/users', require("./routes/user"));
+app.use('/api/user', require("./routes/user"));
+app.use('/api/tweet', require("./routes/tweet"));
 
 // Production Build
 if (process.env.NODE_ENV === 'production') {

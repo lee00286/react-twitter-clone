@@ -1,0 +1,78 @@
+.happening-now-flexbox {
+    /* Flex */
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Size */
+    min-width: 100vw;
+    min-height: 100vh;
+    align-self: stretch;
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    background-size: contain;
+}
+
+.happening-now-left {
+    margin-left: 0;
+}
+
+.happening-now-right {
+    /* Flex */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* Size */
+    width: 50vw;
+    background-color: #000;
+    /* Font */
+    color: #D9D9D9;
+}
+
+.happening-now-right .happening-now-text {
+    /* Align */
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+.happening-now-buttons {
+    /* Align */
+    margin-left: 100px;
+    /* Flex */
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.happening-now-google,
+.happening-now-apple,
+.happening-now-signup {
+    /* Size */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 50px 10px 50px;
+    /* Button */
+    background-color: white;
+    border-radius: 25px;
+    border: thin solid white;
+    /* Font */
+    font-size: 15px;
+}
+
+.happening-now-google:hover,
+.happening-now-apple:hover,
+.happening-now-signup:hover {
+    /* Button */
+    background-color: #E6E6E6;
+    border: thin solid #E6E6E6;
+}
+
+.happening-now-text-small {
+    /* Align */
+    margin-left: 100px;
+    text-align: left;
+}
+
+.happening-now-signin {
+    /* Align */
+    margin-left: 100px;
+}
