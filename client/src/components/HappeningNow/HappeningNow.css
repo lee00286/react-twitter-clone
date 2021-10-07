@@ -1,3 +1,8 @@
+@font-face {
+  font-family: a;
+  src: url("./chirp-extended-heavy-web.woff2");
+}
+
 .happening-now-flexbox {
     /* Flex */
     display: flex;
@@ -12,10 +17,26 @@
     background-size: contain;
 }
 
+/* Left */
 .happening-now-left {
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /* Size */
+    width: 50vw;
+    /* Align */
     margin-left: 0;
 }
 
+/* Left Twitter Logo */
+.happening-now-left svg {
+    height: 300px;
+    fill: white;
+}
+
+/* Right */
 .happening-now-right {
     /* Flex */
     display: flex;
@@ -29,15 +50,53 @@
     color: #D9D9D9;
 }
 
+/* Right Twitter Logo */
+.happening-now-icon {
+    /* Align */
+    margin-left: 100px;
+    margin-bottom: 90px;
+}
+
+.happening-now-icon svg {
+    display: block;
+    height: 60px;
+    fill: white;
+}
+
+/* Right Text */
 .happening-now-right .happening-now-text {
     /* Align */
     margin-left: 100px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
+.happening-now-right a {
+    color: var(--twitter-color);
+    text-decoration: none;
+}
+
+.happening-now-text .happening-now-text-one {
+    /* Align */
+    margin-bottom: 40px;
+    /* Font */
+    font-family: a !important;
+    font-size: 65px;
+}
+
+.happening-now-text .happening-now-text-two {
+    /* Align */
+    margin-bottom: 20px;
+    /* Font */
+    font-family: a !important;
+    font-size: 35px;
+}
+
+/* Right Button */
 .happening-now-buttons {
     /* Align */
     margin-left: 100px;
+    margin-bottom: 10px;
     /* Flex */
     display: flex;
     flex-flow: column wrap;
@@ -48,7 +107,7 @@
 .happening-now-signup {
     /* Size */
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     padding: 10px 50px 10px 50px;
     /* Button */
     background-color: white;
@@ -56,6 +115,8 @@
     border: thin solid white;
     /* Font */
     font-size: 15px;
+    font-weight: bold;
+    font-family: a !important;
 }
 
 .happening-now-google:hover,
@@ -69,10 +130,20 @@
 .happening-now-text-small {
     /* Align */
     margin-left: 100px;
+    margin-bottom: 20px;
     text-align: left;
+    /* Font */
+    font-size: 13px;
+    color: #6F767C;
+}
+
+.happening-now-text-small p {
+    margin-bottom: 3px;
 }
 
 .happening-now-signin {
     /* Align */
     margin-left: 100px;
+    /* Font */
+    font-size: 15px;
 }
