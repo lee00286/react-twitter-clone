@@ -6,6 +6,8 @@ import Auth from "./hoc/auth";
 import './App.css';
 // Pages
 import HappeningNow from './components/HappeningNow/HappeningNow';
+import SignUp from './components/Register/SignUp';
+import SignIn from './components/Register/SignIn';
 import Feed from './components/Feed/Feed';
 import SideBar from './components/SideBar/SideBar';
 
@@ -21,6 +23,8 @@ function App() {
         <div>
           <Switch>
             <Route exact path="/" component={Auth(HappeningNow, false)} />
+            <Route exact path="/signup" component={Auth(SignUp, false)} />
+            <Route exact path="/signin" component={Auth(SignIn, false)} />
             <Route exact path="/feed" component={Auth(Feed, true)} />
           </Switch>
         </div>
