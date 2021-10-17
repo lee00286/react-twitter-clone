@@ -1,6 +1,6 @@
 @font-face {
-  font-family: a;
-  src: url("./chirp-extended-heavy-web.woff2");
+    font-family: a;
+    src: url("./chirp-extended-heavy-web.woff2");
 }
 
 .happening-now-flexbox {
@@ -152,6 +152,11 @@
 
 /* Signup */
 .signup-flexbox {
+    /* Flex */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     /* Align */
     position: fixed;
     margin: 0;

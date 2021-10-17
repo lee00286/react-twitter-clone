@@ -3,23 +3,64 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 // Style
 import "./Register.css";
-import { Button, Form, Input, TimePicker, Typography } from 'antd';
+import { Button, Form, Input, Select, Typography } from 'antd';
 // Twitter Logo
 import Twitter from "../../TwitterLogo";
 // Import
 import { signupUser } from "../../../_actions/user_actions";
 import { Formik } from 'formik';
 
+const { Option } = Select;
 const { Title } = Typography;
+
+const month = [
+    <Option key="January">January</Option>,
+    <Option key="February">February</Option>,
+    <Option key="March">March</Option>,
+    <Option key="April">April</Option>,
+    <Option key="May">May</Option>,
+    <Option key="June">June</Option>,
+    <Option key="July">July</Option>,
+    <Option key="August">August</Option>,
+    <Option key="September">September</Option>,
+    <Option key="October">October</Option>,
+    <Option key="November">November</Option>,
+    <Option key="December">December</Option>
+];
+
+const day = [];
+for (let i = 1; i < 32; i++) {
+    day.push(<Option key={i}>{i}</Option>);
+}
+
+const year = [];
+for (let i = 1901; i < 2022; i++) {
+    year.push(<Option key={i}>{i}</Option>);
+}
 
 function SignUp(props) {
     const [EmailPhone, setEmailPhone] = useState(true);
+    const [Month, setMonth] = useState("January");
+    const [Day, setDay] = useState(1);
+    const [Year, setYear] = useState(2021);
 
     const dispatch = useDispatch();
 
     // Change Email/Phone status
     const onClickEmailPhone = () => {
         setEmailPhone(!EmailPhone);
+    };
+
+    const onClickBirthMonth = (value) => {
+        setMonth(value);
+    };
+
+    const onClickBirthDay = (value) => {
+        setDay(value);
+    };
+
+    const onClickBirthYear = (value) => {
+        setYear(value);
     };
 
     return (
@@ -100,7 +141,19 @@ function SignUp(props) {
                                         <Title level={4}>Date of birth</Title>
                                     </div>
                                     <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
-                                    <p>Month</p>
+                                    <div className="signup-form">
+                                        <div className="signup-form-date">
+                                            <Select className="signup-form-dropdown" onChange={onClickBirthMonth} allowClear>
+                                                {month}
+                                            </Select>
+                                            <Select className="signup-form-dropdown" onChange={onClickBirthDay} allowClear>
+                                                {day}
+                                            </Select>
+                                            <Select className="signup-form-dropdown" onChange={onClickBirthYear} allowClear>
+                                                {year}
+                                            </Select>
+                                        </div>
+                                    </div>
                                     <Button onClick={handleSubmit} type="primary" disabled={isSubmitting}>
                                         Next
                                     </Button>

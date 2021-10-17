@@ -1,11 +1,16 @@
+@font-face {
+    font-family: a;
+    src: url("../chirp-extended-heavy-web.woff2");
+}  
+
 .signup-box {
     /* flex */
     display: flex;
-    flex-flow: center;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    /* Size */
-    width: 50%;
+    /* Align */
+    position: absolute;
 }
 
 .signup-container {
@@ -13,6 +18,7 @@
     background-color: black;
     /* Size */
     padding: 1vw 2vw 2vw 2vw;
+    width: 500px;
     /* Flex */
     display: flex;
     flex-flow: column nowrap;
@@ -22,7 +28,7 @@
     text-align: left;
     /* Border */
     border: thin solid black;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 /* Form Twitter Logo */
@@ -36,7 +42,7 @@
 }
 
 .signup-form-logo svg {
-    height: 20px;
+    height: 25px;
     fill: white;
     margin-bottom: 30px;
 }
@@ -48,6 +54,11 @@
     color: white;
 }
 
+.signup-form-title Title {
+    /* Font */
+    font-family: a !important;
+}
+
 .signup-form-subtitle {
     margin-bottom: 5px;
     /* Font */
@@ -56,7 +67,7 @@
 
 .signup-container p {
     /* Align */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: left;
     /* Font */
     font-size: 13px;
@@ -85,7 +96,7 @@
 
 .signup-form Input {
     margin-bottom: 15px;
-    padding: 1vw 0.5vw 1vw 0.5vw;
+    padding: 13px 7px 13px 7px;
     background-color: black;
     /* Border */
     border: thin solid #6F767C;
@@ -94,9 +105,22 @@
     color: white;
 }
 
+.signup-form-date {
+    /* Flex */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.signup-form-dropdown {
+    width: 150px;
+    /* background: white; */
+}
+
 /* Signup Button */
 .signup-container Button {
-    padding: 1vw 0.5vw 1vw 0.5vw;
+    padding: 13px 7px 13px 7px;
     width: 100%;
     border-radius: 25px;
+    /* Mouse */
+    cursor: pointer;
 }
