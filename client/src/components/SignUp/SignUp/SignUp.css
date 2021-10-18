@@ -1,0 +1,126 @@
+@font-face {
+    font-family: a;
+    src: url("../chirp-extended-heavy-web.woff2");
+}  
+
+.signup-box {
+    /* flex */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /* Align */
+    position: absolute;
+}
+
+.signup-container {
+    z-index: 500;
+    background-color: black;
+    /* Size */
+    padding: 1vw 2vw 2vw 2vw;
+    width: 500px;
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    /* Font */
+    color: #6F767C;
+    text-align: left;
+    /* Border */
+    border: thin solid black;
+    border-radius: 20px;
+}
+
+/* Form Twitter Logo */
+.signup-form-logo {
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* Size */
+    width: 100%;
+}
+
+.signup-form-logo svg {
+    height: 25px;
+    fill: white;
+    margin-bottom: 30px;
+}
+
+/* Signup Text */
+.signup-form-title {
+    margin-bottom: 20px;
+    /* Font */
+    color: white;
+}
+
+.signup-form-title Title {
+    /* Font */
+    font-family: a !important;
+}
+
+.signup-form-subtitle {
+    margin-bottom: 5px;
+    /* Font */
+    color: white;
+}
+
+.signup-container p {
+    /* Align */
+    margin-bottom: 10px;
+    text-align: left;
+    /* Font */
+    font-size: 13px;
+    color: #6F767C;
+}
+
+.signup-form-email-phone {
+    /* Align */
+    margin-bottom: 20px;
+    text-align: left;
+    /* Font */
+    font-size: 13px;
+    color: var(--twitter-color);
+    /* Mouse */
+    cursor: pointer;
+}
+
+/* Signup Form */
+.signup-form {
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+    /* Align */
+    margin-bottom: 5px;
+}
+
+.signup-form Input {
+    margin-bottom: 15px;
+    padding: 13px 7px 13px 7px;
+    background-color: black;
+    /* Border */
+    border: thin solid #6F767C;
+    border-radius: 5px;
+    /* Font */
+    color: white;
+}
+
+.signup-form-date {
+    /* Flex */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.signup-form-dropdown {
+    width: 150px;
+    /* background: white; */
+}
+
+/* Signup Button */
+.signup-container Button {
+    padding: 13px 7px 13px 7px;
+    width: 100%;
+    border-radius: 25px;
+    /* Mouse */
+    cursor: pointer;
+}

@@ -7,7 +7,7 @@ import { Button, Typography } from 'antd';
 // Twitter Logo
 import Twitter from "../TwitterLogo";
 // Import
-import SignUp from "./Register/SignUp";
+import SignUp from "./SignUp/SignUp";
 
 const { Title } = Typography;
 
@@ -51,7 +51,7 @@ function HappeningNow() {
                         <p><a href="https://twitter.com/ko/privacy">Policy</a>, including <a href="https://help.twitter.com/ko/rules-and-policies/twitter-cookies">Cookie Use</a>.</p>
                     </div>
                     <div className="happening-now-signin">
-                        Already have an account? <a>Sign in</a>
+                        Already have an account? <a href="/signin">Sign in</a>
                     </div>
                 </div>
             </div>

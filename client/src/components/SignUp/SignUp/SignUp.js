@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 // Style
-import "./Register.css";
+import "./SignUp.css";
 import { Button, Form, Input, Select, Typography } from 'antd';
 // Twitter Logo
 import Twitter from "../../TwitterLogo";

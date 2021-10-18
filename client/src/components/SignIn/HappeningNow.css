@@ -1,0 +1,163 @@
+@font-face {
+    font-family: a;
+    src: url("./chirp-extended-heavy-web.woff2");
+}
+
+.happening-now-flexbox {
+    /* Flex */
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    /* Size */
+    min-width: 100vw;
+    min-height: 100vh;
+    align-self: stretch;
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    background-size: contain;
+}
+
+/* Left */
+.happening-now-left {
+    /* Flex */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /* Size */
+    width: 50vw;
+    /* Align */
+    margin-left: 0;
+}
+
+/* Left Twitter Logo */
+.happening-now-left svg {
+    height: 300px;
+    fill: white;
+}
+
+/* Right */
+.happening-now-right {
+    /* Flex */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* Size */
+    width: 50vw;
+    background-color: #000;
+    /* Font */
+    color: #D9D9D9;
+}
+
+/* Right Twitter Logo */
+.happening-now-icon {
+    /* Align */
+    margin-left: 100px;
+    margin-bottom: 90px;
+}
+
+.happening-now-icon svg {
+    display: block;
+    height: 60px;
+    fill: white;
+}
+
+/* Right Text */
+.happening-now-right .happening-now-text {
+    /* Align */
+    margin-left: 100px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.happening-now-right a {
+    color: var(--twitter-color);
+    text-decoration: none;
+}
+
+.happening-now-text .happening-now-text-one {
+    /* Align */
+    margin-bottom: 40px;
+    /* Font */
+    font-family: a !important;
+    font-size: 65px;
+}
+
+.happening-now-text .happening-now-text-two {
+    /* Align */
+    margin-bottom: 20px;
+    /* Font */
+    font-family: a !important;
+    font-size: 35px;
+}
+
+/* Right Button */
+.happening-now-buttons {
+    /* Align */
+    margin-left: 100px;
+    margin-bottom: 10px;
+    /* Flex */
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.happening-now-google,
+.happening-now-apple,
+.happening-now-signup {
+    /* Size */
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 10px 50px 10px 50px;
+    /* Button */
+    background-color: white;
+    border-radius: 25px;
+    border: thin solid white;
+    /* Font */
+    font-size: 15px;
+    font-weight: bold;
+    font-family: a !important;
+    /* Mouse */
+    cursor: pointer;
+}
+
+.happening-now-google:hover,
+.happening-now-apple:hover,
+.happening-now-signup:hover {
+    /* Button */
+    background-color: #E6E6E6;
+    border: thin solid #E6E6E6;
+}
+
+.happening-now-signin {
+    /* Align */
+    margin-left: 100px;
+    /* Font */
+    font-size: 15px;
+}
+
+/* Signup */
+.signup-flexbox {
+    /* Flex */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /* Align */
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Size */
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+}
+
+.signup-background {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
